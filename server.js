@@ -26,7 +26,7 @@ app.use(express.static('public'))//This takes files in the public folder and let
 app.get('/', (req, res) => {
   db.collection('messages').find().toArray((err, result) => {
     if (err) return console.log(err)
-    console.log(res.body)
+    //console.log(res.body)
     res.render('index.ejs', {messages: result})
     
   })
